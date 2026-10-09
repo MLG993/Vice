@@ -110,7 +110,15 @@
     "copyLinkBody": "Le presse-papiers n'était pas disponible, voici donc le lien à copier à la main.",
     "restartTitle": "Redémarre Vice pour terminer",
     "restartBody": "Ce réglage est enregistré, mais il ne prend effet qu'au redémarrage du daemon.",
-    "gotIt": "Compris"
+    "gotIt": "Compris",
+    "gameCapture": "Game Capture",
+    "gameCaptureUnsupported": "Nécessite gpu-screen-recorder",
+    "gameCaptureGame": "Fenêtre du jeu uniquement",
+    "gameCaptureDesktop": "Écran entier",
+    "gameCaptureOn": "Capture de jeu activée",
+    "gameCaptureOff": "Capture de jeu désactivée",
+    "gameCaptureOnDetail": "L'enregistrement suit la fenêtre du jeu au premier plan",
+    "errGameCapture": "Impossible de modifier la capture de jeu"
   },
   "card": {
     "unreadable": "Illisible",
@@ -147,7 +155,14 @@
     "linkCopiedLocalDetail": "Installe cloudflared pour des liens qui fonctionnent hors de ton réseau",
     "shareLinkCopied": "Lien de partage copié",
     "alreadyIn": "Déjà dans {playlist}",
-    "errAddClip": "Impossible d'ajouter le clip"
+    "errAddClip": "Impossible d'ajouter le clip",
+    "share": "Partager",
+    "copyForDiscord": "Copier pour Discord",
+    "shareTitle": "{action}. Right-click for more ways to share",
+    "discordPreparing": "Création d'une copie adaptée à Discord",
+    "discordCopied": "Copié pour Discord",
+    "discordCopiedDetail": "Colle-la dans un message Discord. Elle respecte la limite d'envoi gratuite.",
+    "errDiscordCopy": "Impossible de copier le clip pour Discord"
   },
   "playlistModal": {
     "editTitle": "Modifier la playlist",
@@ -237,7 +252,8 @@
     "open": "Ouvrir",
     "useEmoji": "Utiliser {emoji}",
     "errSetEmoji": "Impossible de définir l'emoji",
-    "main": "Principal"
+    "main": "Principal",
+    "whatsNew": "Nouveautés"
   },
   "viewer": {
     "errReveal": "Impossible d'ouvrir le gestionnaire de fichiers",
@@ -299,7 +315,16 @@
     "expand": "Remplir la fenêtre",
     "shrink": "Revenir à la taille normale",
     "expandHint": "Remplir la fenêtre (F, ou double-clic)",
-    "shrinkHint": "Revenir à la taille normale (F, ou Échap)"
+    "shrinkHint": "Revenir à la taille normale (F, ou Échap)",
+    "shareTitle": "Partager ce clip",
+    "shareHighQuality": "Haute qualité",
+    "shareCopyHint": "Cliquer pour copier",
+    "shareNoLink": "No share link yet. Turn on sharing in Settings.",
+    "shareDragHeading": "Drag & drop",
+    "shareDragHint": "Glisse ce clip dans n'importe quelle conversation Discord pour l'envoyer",
+    "sharePreparing": "Création d'une copie adaptée à Discord…",
+    "shareDragFailed": "Impossible de préparer la copie pour Discord",
+    "shareDiscordSize": "Prêt pour Discord · {size}"
   },
   "trim": {
     "saved": "Clip découpé et enregistré",
@@ -417,7 +442,11 @@
     "moreBody": "C'est tout ce dont tu as besoin. Réglages contient les options que tu ne touches qu'une fois.",
     "recTitle": "Enregistrement",
     "recHelp": "Encodeur, résolution, fréquence d'images, quel moniteur, et quel audio va sur quelle piste.",
-    "badgeRec": "Enr."
+    "badgeRec": "Enr.",
+    "gameCaptureTitle": "Enregistrer uniquement le jeu",
+    "gameCaptureHelp": "La capture de jeu enregistre uniquement la fenêtre du jeu, afin que Discord et les autres fenêtres n'apparaissent pas dans tes clips. Désactivée, elle enregistre l'écran entier. Tu peux la modifier à tout moment depuis les réglages rapides.",
+    "shareDiscordTitle": "Partager crée un fichier Discord",
+    "shareDiscordHelp": "Désactivé, le bouton Partager copie un lien. Activé, il copie directement le clip, réduit pour respecter la limite d'envoi gratuite de Discord. Fais un clic droit sur Partager pour utiliser l'autre option, et change ce réglage à tout moment dans Réglages."
   },
   "accents": {
     "blue": "Bleu",
@@ -613,7 +642,12 @@
     "audioMuted": "Muet",
     "audioPreviewFailed": "Impossible de lire cette piste audio. Réessaie ou consulte le journal.",
     "detachedTracksHelp": "Chaque source enregistrée a sa propre piste. Seule la piste 1 est activée au départ, pour qu'une piste combinée ne soit pas mixée deux fois. Réactive le son des sources que tu veux entendre.",
-    "preparingMedia": "Préparation de l'aperçu"
+    "preparingMedia": "Préparation de l'aperçu",
+    "discordOptimize": "Optimiser pour Discord (moins de 20 Mo)",
+    "exportSummary": "{seconds}s · {format} vers {path}",
+    "exportFormatDiscord": "Optimisé pour Discord (moins de 20 Mo)",
+    "exportFormatDefault": "H.264 and AAC",
+    "exportFolderUnpicked": "un dossier de ton choix"
   },
   "settings": {
     "title": "Réglages",
@@ -823,6 +857,40 @@
     "clearKey": "Effacer",
     "imageDirectory": "Dossier des images",
     "imageDirectoryHelp": "Là où les captures d'écran sont écrites. Séparé des clips pour qu'une visionneuse d'images n'indexe pas un dossier de fichiers vidéo.",
-    "soundScreenshot": "Capture d'écran"
+    "soundScreenshot": "Capture d'écran",
+    "windowCapture": "Capture de jeu",
+    "windowCaptureHelp": "Enregistre uniquement la fenêtre du jeu au premier plan plutôt que l'écran entier. Seules les fenêtres que Vice reconnaît comme des jeux sont prises en compte : passer sur Discord ou un navigateur ne change donc pas la capture. Passer à un autre jeu redémarre le tampon, donc un clip pris juste après sera court.",
+    "windowCaptureUnsupported": "Nécessite le backend gpu-screen-recorder.",
+    "discordGameIcons": "Afficher l'icône du jeu",
+    "discordGameIconsHelp": "Affiche l'icône Discord du jeu sur ton profil, avec le logo de Vice comme petit badge. Vice recherche le jeu dans la liste publique des jeux détectables de Discord et met le résultat en cache. Si l'option est désactivée ou si la recherche échoue, le logo Vice classique est affiché.",
+    "shareDiscordFile": "Partager copie un fichier Discord",
+    "shareDiscordFileHelp": "Activé : le bouton Partager copie directement le clip, réduit pour respecter la limite d'envoi gratuite de Discord, prêt à être collé dans un message. Désactivé : il copie le lien de partage. Fais un clic droit sur Partager pour utiliser l'autre option dans tous les cas."
+  },
+  "whatsNew": {
+    "title": "Nouveautés de Vice {version}",
+    "close": "Compris",
+    "thanks": "Merci à {names} pour leur travail sur cette version.",
+    "v2_15_0": {
+      "gameCapture": {
+        "title": "Enregistrer uniquement le jeu",
+        "body": "Active la capture de jeu dans les réglages rapides et Vice enregistre uniquement la fenêtre du jeu, afin que Discord et tout le reste n'apparaissent pas dans tes clips. Elle est désactivée par défaut."
+      },
+      "discordShare": {
+        "title": "Partager directement sur Discord",
+        "body": "Fais un clic droit sur Partager pour créer une copie du clip qui respecte la limite d'envoi gratuite de Discord, prête à être glissée ou collée. Dans Réglages > Partage, tu peux faire de cette option l'action du bouton Partager. L'éditeur peut également exporter un fichier adapté à Discord."
+      },
+      "gameIcons": {
+        "title": "L'icône de ton jeu sur Discord",
+        "body": "Ton profil Discord affiche maintenant l'icône du jeu auquel tu joues, avec le logo de Vice comme petit badge. Tu peux désactiver cette option dans Réglages > Discord."
+      },
+      "steamNames": {
+        "title": "More games recognized",
+        "body": "Tous les jeux installés via Steam sont maintenant identifiés dans les clips et sur Discord, même s'ils ne figurent pas dans la propre liste de Vice."
+      },
+      "languages": {
+        "title": "Français et portugais brésilien",
+        "body": "Vice est maintenant disponible en français et en portugais brésilien. Choisis une langue dans Réglages > Apparence."
+      }
+    }
   }
 }
